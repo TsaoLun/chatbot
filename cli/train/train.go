@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kevwan/chatbot/bot"
-	"github.com/kevwan/chatbot/bot/adapters/storage"
+	"github.com/tsaolun/chatbot/bot"
+	"github.com/tsaolun/chatbot/bot/adapters/storage"
 )
 
 var (

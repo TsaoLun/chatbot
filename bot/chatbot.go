@@ -5,10 +5,10 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/kevwan/chatbot/bot/adapters/input"
-	"github.com/kevwan/chatbot/bot/adapters/logic"
-	"github.com/kevwan/chatbot/bot/adapters/output"
-	"github.com/kevwan/chatbot/bot/adapters/storage"
+	"github.com/tsaolun/chatbot/bot/adapters/input"
+	"github.com/tsaolun/chatbot/bot/adapters/logic"
+	"github.com/tsaolun/chatbot/bot/adapters/output"
+	"github.com/tsaolun/chatbot/bot/adapters/storage"
 )
 
 const mega = 1024 * 1024

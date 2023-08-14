@@ -34,7 +34,7 @@ English | [简体中文](readme-cn.md)
 
 ## Data format
 
-The data format can be provided via `yaml` or `json` files, refer to the format in `https://github.com/kevwan/chatterbot-corpus`. Roughly, it is as follows.
+The data format can be provided via `yaml` or `json` files, refer to the format in `https://github.com/tsaolun/chatterbot-corpus`. Roughly, it is as follows.
 
 ```yaml
 categories:

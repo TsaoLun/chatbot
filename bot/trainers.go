@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/kevwan/chatbot/bot/adapters/storage"
-	"github.com/kevwan/chatbot/bot/corpus"
+	"github.com/tsaolun/chatbot/bot/adapters/storage"
+	"github.com/tsaolun/chatbot/bot/corpus"
 )
 
 type (

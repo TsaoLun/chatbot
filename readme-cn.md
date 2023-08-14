@@ -31,7 +31,7 @@
 
 ## 数据格式
 
-数据格式可以通过 `yaml` 或者 `json` 文件提供，参考 `https://github.com/kevwan/chatterbot-corpus` 里的格式。大致如下：
+数据格式可以通过 `yaml` 或者 `json` 文件提供，参考 `https://github.com/tsaolun/chatterbot-corpus` 里的格式。大致如下：
 
 ```yaml
 categories:

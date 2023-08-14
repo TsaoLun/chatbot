@@ -4,7 +4,7 @@ import (
 	"encoding/gob"
 	"os"
 
-	"github.com/kevwan/chatbot/bot/nlp"
+	"github.com/tsaolun/chatbot/bot/nlp"
 )
 
 type separatedMemoryStorage struct {
