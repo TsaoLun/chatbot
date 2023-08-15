@@ -20,7 +20,7 @@ var (
 
 func main() {
 	flag.Parse()
-
+	log.Printf("dir: %s, corpora: %s, storeFile: %s", *dir, *corpora, *storeFile)
 	var files []string
 	if len(*dir) > 0 {
 		files = findCorporaFiles(*dir)
