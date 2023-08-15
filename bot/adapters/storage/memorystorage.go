@@ -27,6 +27,15 @@ var (
 	generatedStopWordsFile = "../etc/stopwords.txt"
 )
 
+func init() {
+	// 获取当前文件的绝对路径
+	dir, _ := os.Getwd()
+	dictFile = path.Join(dir, dictFile)
+	idfFile = path.Join(dir, idfFile)
+	stopWordsFile = path.Join(dir, stopWordsFile)
+	generatedStopWordsFile = path.Join(dir, generatedStopWordsFile)
+}
+
 type (
 	keyChunk struct {
 		offfset int
@@ -45,12 +54,6 @@ type (
 
 func RestoreMemoryStorage(decoder *gob.Decoder) (*memoryStorage, error) {
 	var segmenter jiebago.Segmenter
-	// 获取当前文件的绝对路径
-	dir, _ := os.Getwd()
-	dictFile = path.Join(dir, dictFile)
-	idfFile = path.Join(dir, idfFile)
-	stopWordsFile = path.Join(dir, stopWordsFile)
-	generatedStopWordsFile = path.Join(dir, generatedStopWordsFile)
 	logx.Must(segmenter.LoadDictionary(dictFile))
 	var extracter analyse.TagExtracter
 	logx.Must(extracter.LoadDictionary(dictFile))
