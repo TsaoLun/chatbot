@@ -2,6 +2,7 @@ package storage
 
 import (
 	"encoding/gob"
+	"flag"
 	"fmt"
 	"log"
 	"math"
@@ -26,12 +27,13 @@ var (
 	idfFile                = "./etc/idf.txt"
 	stopWordsFile          = "./etc/stop_words.txt"
 	generatedStopWordsFile = "./etc/stopwords.txt"
+	EtcDir        = flag.String("etc", "cli", "the etc directory to look for corpora files")
 )
 
 func init() {
 	// 获取当前文件的绝对路径
 	dir, _ := os.Getwd()
-	dictFile = path.Join(dir, dictFile)
+	dictFile = path.Join(dir, *EtcDir, dictFile)
 	idfFile = path.Join(dir, idfFile)
 	stopWordsFile = path.Join(dir, stopWordsFile)
 	generatedStopWordsFile = path.Join(dir, generatedStopWordsFile)
