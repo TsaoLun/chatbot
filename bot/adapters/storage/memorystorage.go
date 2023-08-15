@@ -22,15 +22,15 @@ var (
 	thresholdForKeywords   = 5
 	maxSearchResults       = 100
 	thresholdForStopWords  = 100
-	dictFile               = "../etc/dict.txt"
-	idfFile                = "../etc/idf.txt"
-	stopWordsFile          = "../etc/stop_words.txt"
-	generatedStopWordsFile = "../etc/stopwords.txt"
+	dictFile               = "./etc/dict.txt"
+	idfFile                = "./etc/idf.txt"
+	stopWordsFile          = "./etc/stop_words.txt"
+	generatedStopWordsFile = "./etc/stopwords.txt"
 )
 
 func init() {
 	// 获取当前文件的绝对路径
-	dir := os.Args[0]
+	dir, _ := os.Getwd()
 	dictFile = path.Join(dir, dictFile)
 	idfFile = path.Join(dir, idfFile)
 	stopWordsFile = path.Join(dir, stopWordsFile)
