@@ -2,6 +2,7 @@ package storage
 
 import (
 	"encoding/gob"
+	"log"
 	"os"
 
 	"github.com/tsaolun/chatbot/bot/nlp"
@@ -17,6 +18,7 @@ func NewSeparatedMemoryStorage(filepath string) (*separatedMemoryStorage, error)
 	var declarativeStorage, questionStorage GobStorage
 
 	if _, err := os.Stat(filepath); err == nil {
+		log.Printf("Loading separated memory storage from %s", filepath)
 		f, err := os.Open(filepath)
 		if err != nil {
 			return nil, err
