@@ -3,6 +3,7 @@ package storage
 import (
 	"encoding/gob"
 	"fmt"
+	"log"
 	"math"
 	"os"
 	"path"
@@ -34,6 +35,7 @@ func init() {
 	idfFile = path.Join(dir, idfFile)
 	stopWordsFile = path.Join(dir, stopWordsFile)
 	generatedStopWordsFile = path.Join(dir, generatedStopWordsFile)
+	log.Printf("dictFile: %s idfFile %s stopWordsFile %s genratedStopWordsFile %s\n", dictFile, idfFile, stopWordsFile, generatedStopWordsFile)
 }
 
 type (
