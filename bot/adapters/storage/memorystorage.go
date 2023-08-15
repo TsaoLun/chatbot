@@ -30,7 +30,7 @@ var (
 
 func init() {
 	// 获取当前文件的绝对路径
-	dir, _ := os.Getwd()
+	dir := os.Args[0]
 	dictFile = path.Join(dir, dictFile)
 	idfFile = path.Join(dir, idfFile)
 	stopWordsFile = path.Join(dir, stopWordsFile)
