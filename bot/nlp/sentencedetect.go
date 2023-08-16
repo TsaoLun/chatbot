@@ -44,6 +44,29 @@ func IsQuestion(sentence string) bool {
 	return false
 }
 
+func RemoveAllQuestionMark(sentence string) string {
+	chars := []rune(strings.TrimSpace(sentence))
+	if len(chars) == 0 {
+		return sentence
+	}
+
+	if _, ok := endQuestionChars[chars[len(chars)-1]]; ok {
+		sentence = string(chars[:len(chars)-1])
+	}
+	// remove embededQuestionMarks
+	for _, key := range embededQuestionMarks {
+		if strings.Contains(sentence, key) {
+			sentence = strings.ReplaceAll(sentence, key, "")
+			chars = []rune(strings.TrimSpace(sentence))
+			if len(chars) == 0 {
+				return sentence
+			}
+		}
+	}
+
+	return sentence
+}
+
 func createSet(items []rune) map[rune]lang.PlaceholderType {
 	ret := make(map[rune]lang.PlaceholderType)
 	for _, item := range items {

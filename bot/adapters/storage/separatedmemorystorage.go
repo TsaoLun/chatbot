@@ -64,10 +64,9 @@ func (storage *separatedMemoryStorage) Find(sentence string) (map[string]int, bo
 
 func (storage *separatedMemoryStorage) Search(sentence string) []string {
 	if nlp.IsQuestion(sentence) {
-		return storage.questionStorage.Search(sentence)
-	} else {
-		return storage.declarativeStorage.Search(sentence)
+		sentence = nlp.RemoveAllQuestionMark(sentence)
 	}
+	return storage.declarativeStorage.Search(sentence)
 }
 
 func (storage *separatedMemoryStorage) Remove(sentence string) {

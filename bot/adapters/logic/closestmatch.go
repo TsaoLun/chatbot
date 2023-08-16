@@ -151,7 +151,6 @@ func generator(match *closestMatch, text string) mr.GenerateFunc {
 		if match.verbose {
 			printMatches(keys)
 		}
-
 		chunks := splitStrings(keys, chunkSize)
 		for _, chunk := range chunks {
 			source <- sourceAndTargets{
